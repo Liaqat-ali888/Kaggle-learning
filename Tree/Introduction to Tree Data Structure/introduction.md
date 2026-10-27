@@ -1,3 +1,196 @@
+# Introduction to Binary Tree
+
+## Table of Contents
+
+1. [Introduction](#introduction)
+2. [Representation of a Binary Tree](#representation-of-a-binary-tree)
+3. [Terminologies](#terminologies)
+4. [Example of a Binary Tree](#example-of-a-binary-tree)
+5. [Conclusion](#conclusion)
+
+---
+
+## Introduction
+
+A **Binary Tree** is a non-linear and hierarchical data structure in which each node can have a maximum of two children, known as the **left child** and the **right child**.
+
+The topmost node of a binary tree is called the **root node**, while the bottom-most nodes that have no children are called **leaf nodes**.
+
+Binary trees are widely used in searching, sorting, expression evaluation, and hierarchical data organization.
+
+**Characteristics:**
+
+- Each node can have at most two children.
+- Each node contains data and references to its children.
+- The first node is called the root.
+- Nodes without children are called leaf nodes.
+- A binary tree can be empty or contain one or more nodes.
+
+---
+
+## Representation of a Binary Tree
+
+Each node in a binary tree typically consists of three parts:
+
+1. **Data:** Stores the value of the node.
+2. **Left Pointer:** Stores a reference to the left child.
+3. **Right Pointer:** Stores a reference to the right child.
+
+**Example:**
+
+```text
+        10
+       /  \
+      20   30
+     / \
+    40  50
+```
+
+In this example:
+
+- `10` is the root node.
+- `20` is the left child of `10`.
+- `30` is the right child of `10`.
+- `40` and `50` are the children of `20`.
+- `40`, `50`, and `30` are leaf nodes.
+
+**Java Representation:**
+
+```java
+class Node {
+    int data;
+    Node left;
+    Node right;
+
+    Node(int data) {
+        this.data = data;
+        left = null;
+        right = null;
+    }
+}
+```
+
+In this code:
+
+- `data` stores the node's value.
+- `left` references the left child.
+- `right` references the right child.
+- Both child references are initially `null`.
+
+---
+
+## Terminologies
+
+### 1. Parent Node
+
+A **Parent Node** is a node that has a direct child.
+
+**Example:** In the tree above, `10` is the parent of `20` and `30`.
+
+### 2. Child Node
+
+A **Child Node** is a node directly connected below another node.
+
+**Example:** `20` and `30` are children of `10`.
+
+### 3. Ancestors of a Node
+
+**Ancestors** are all the nodes on the path from the root to a particular node, excluding that node itself.
+
+**Example:** The ancestors of `40` are `10` and `20`.
+
+### 4. Descendants of a Node
+
+**Descendants** are all nodes located in the subtree of a particular node, excluding that node itself.
+
+**Example:** The descendants of `20` are `40` and `50`.
+
+### 5. Subtree
+
+A **Subtree** is a tree formed by a node and all its descendants.
+
+**Example:** The subtree rooted at `20` contains nodes `20`, `40`, and `50`.
+
+### 6. Edge
+
+An **Edge** is the connection between a parent node and its child node.
+
+**Example:** The connection between `10` and `20` is an edge.
+
+### 7. Path
+
+A **Path** is a sequence of nodes connected through edges.
+
+**Example:** The path from the root to `40` is:
+
+```text
+10 → 20 → 40
+```
+
+### 8. Leaf Node
+
+A **Leaf Node** is a node that has no children. Both its left and right child references are `null`.
+
+**Example:** Nodes `30`, `40`, and `50` are leaf nodes.
+
+### 9. Internal Node
+
+An **Internal Node** is a node that has at least one child.
+
+**Example:** Nodes `10` and `20` are internal nodes.
+
+### 10. Depth of a Node
+
+The **Depth** of a node is the number of edges from the root to that node. The root has a depth of zero.
+
+**Example:**
+
+- Depth of `10` = 0
+- Depth of `20` = 1
+- Depth of `40` = 2
+
+### 11. Height of a Binary Tree
+
+The **Height** of a binary tree is the number of edges on the longest downward path from the root to a leaf node.
+
+**Example:** In the given tree, the longest path is `10 → 20 → 40`, which contains two edges. Therefore, the height is **2**.
+
+---
+
+## Example of a Binary Tree
+
+Consider the following binary tree:
+
+```text
+        10
+       /  \
+      20   30
+     / \
+    40  50
+```
+
+| Property | Value |
+|---|---|
+| Root Node | 10 |
+| Parent of 20 | 10 |
+| Children of 10 | 20, 30 |
+| Leaf Nodes | 30, 40, 50 |
+| Internal Nodes | 10, 20 |
+| Depth of Node 40 | 2 |
+| Height of Tree | 2 |
+| Total Number of Nodes | 5 |
+| Total Number of Edges | 4 |
+
+---
+
+## Conclusion
+
+A **Binary Tree** is an important hierarchical data structure in computer science. It organizes data using nodes and edges, with each node having at most two children.
+
+Understanding its representation and terminology, including root, parent, child, leaf, subtree, depth, and height, provides a foundation for learning advanced tree structures such as Binary Search Trees, AVL Trees, and Heaps.
+
+
+
 # Types of Tree Data Structures
 
 ## Table of Contents
